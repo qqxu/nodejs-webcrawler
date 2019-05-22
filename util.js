@@ -1,7 +1,6 @@
 const accessPage = (url, callback) => {
 	// 访问页面
 	const superagent = require('superagent');
-
 	superagent.get(url).retry(3).end((err, res) => {
 		if(err) {
 			console.log(`访问页面失败${err}`);
